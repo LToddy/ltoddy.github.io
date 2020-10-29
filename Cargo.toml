@@ -1,0 +1,15 @@
+[package]
+name = "daffodils"
+version = "0.1.0"
+edition = "2021"
+authors = ["ltoddy <taoliu0509@gmail.com>"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+description = "say awesome things in a flat tone"
+
+[dependencies]
+anyhow = "1.0"
+chrono = "0.4"
+clap = { version = "4.1", features = ["derive"] }
+log = "0.4"
+simplelog = "0.12"

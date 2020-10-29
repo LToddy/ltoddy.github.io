@@ -1,0 +1,6 @@
+[book]
+authors = ["ltoddy"]
+language = "zh"
+multilingual = false
+src = "posts"
+title = "Have a look"
