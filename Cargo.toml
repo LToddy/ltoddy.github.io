@@ -11,5 +11,6 @@ description = "say awesome things in a flat tone"
 anyhow = "1.0"
 chrono = "0.4"
 clap = { version = "4.1", features = ["derive"] }
+clap_complete = "4.1.0"
 log = "0.4"
 simplelog = "0.12"

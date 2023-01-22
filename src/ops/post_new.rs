@@ -14,7 +14,8 @@ pub fn new_post(args: NewArgs) -> anyhow::Result<()> {
     let date = Local::now().format("%Y-%m-%d");
     let posts_dir = current_dir.join("posts");
 
-    let mut filename = posts_dir.join(format!("{}-{}", date, title.replace(' ', "-").to_lowercase()));
+    let mut filename =
+        posts_dir.join(format!("{}-{}", date, title.replace(' ', "-").to_lowercase()));
     filename.set_extension("md");
 
     if filename.exists() {
