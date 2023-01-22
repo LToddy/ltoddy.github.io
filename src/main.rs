@@ -1,7 +1,9 @@
 pub mod cli;
 pub mod ops;
 
-use clap::Parser;
+use std::io;
+
+use clap::{CommandFactory, Parser};
 use log::LevelFilter::Debug;
 use simplelog::{ColorChoice, TermLogger, TerminalMode};
 
@@ -16,6 +18,10 @@ pub fn main() -> anyhow::Result<()> {
         SubCommands::Post(subcommand) => match subcommand {
             Posts::New(args) => new_post(args)?,
         },
+        SubCommands::Completions(args) => {
+            let mut cmd = Cli::command();
+            args.print_completions(&mut cmd, &mut io::stdout().lock());
+        }
     }
 
     Ok(())
